@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	  ml_config.vm.network :private_network, ip: "192.168.56.101"
 
 	  ml_config.vm.provider :virtualbox do |vb|
-	    vb.customize ["modifyvm", :id, "--memory", "4096"]
+	    vb.customize ["modifyvm", :id, "--memory", "2048"]
 	  end
 	  
 	  ml_config.vm.provision :shell, :path => "install_puppet.sh"
